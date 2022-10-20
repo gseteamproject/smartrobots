@@ -8,6 +8,7 @@ import jade.lang.acl.UnreadableException;
 
 public class HandleStationRequestBehaviour extends CyclicBehaviour {
 
+	private static final long serialVersionUID = 8874504551679086958L;
 	private Robot robot;
 	private int state;
 	

@@ -17,6 +17,7 @@ import smartrobots.model.grid.Position;
 
 public class FindWorkerBehaviour extends SimpleBehaviour {
 	
+	private static final long serialVersionUID = -944676346534814765L;
 	private static final int UPDATE_ACTIVE_ROBOTS = 0; 
 	private static final int SEND_CFP_TO_ROBOTS = 1;
 	private static final int WAIT_FOR_ANSWER = 2;
@@ -24,16 +25,21 @@ public class FindWorkerBehaviour extends SimpleBehaviour {
 	private Station station;
 	private AID currentWorker;
 	private AID[] robots;
+
+	@SuppressWarnings("unused")
 	private int repliesCount;
+
+	@SuppressWarnings("unused")
 	private MessageTemplate template;
+
 	private int step;
-	
+
 	@Override
 	public void onStart() {
 		station = (Station) getDataStore().get("station");
 		step = UPDATE_ACTIVE_ROBOTS;
 	}
-	
+
 	@Override
 	public void action() {
 		switch (step) {
@@ -94,7 +100,10 @@ public class FindWorkerBehaviour extends SimpleBehaviour {
 	private void waitForAnswers() {
 		ACLMessage msg = myAgent.receive();
 		if (msg != null) {
+			@SuppressWarnings("unused")
 			String title = msg.getContent();
+
+			@SuppressWarnings("unused")
 			ACLMessage reply = msg.createReply();
 		}
 	}

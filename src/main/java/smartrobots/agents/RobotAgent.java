@@ -45,6 +45,7 @@ public class RobotAgent extends Agent {
 		return picker;
 	}
 	
+	@SuppressWarnings("unused")
 	private SequentialBehaviour transporter() {
 		ParallelBehaviour base = new ParallelBehaviour(this, ParallelBehaviour.WHEN_ALL) {
 			private static final long serialVersionUID = 8909624426147018773L;
@@ -65,8 +66,11 @@ public class RobotAgent extends Agent {
 	}
 	
 	
+	@SuppressWarnings("unused")
 	private SequentialBehaviour worker() {
 		SequentialBehaviour worker = new SequentialBehaviour(this) {
+			private static final long serialVersionUID = -843709396326223474L;
+
 			public int onEnd() {
 				reset();
 				myAgent.addBehaviour(this);

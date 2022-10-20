@@ -18,9 +18,14 @@ public class StationAgent extends Agent {
 
 	private static final long serialVersionUID = 3425411531816594492L;
 	private Station station;
+
+	@SuppressWarnings("unused")
 	private Codec codec = new SLCodec();
+
+	@SuppressWarnings("unused")
 	private Ontology ontology = BlockProcessingOntology.getInstance();
-	
+
+	@SuppressWarnings("unused")
 	private AID[] robots;
 	
 	@Override
