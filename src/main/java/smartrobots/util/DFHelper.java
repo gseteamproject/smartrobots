@@ -19,7 +19,7 @@ public class DFHelper {
 		dfd.addServices(sd);
 
 		SearchConstraints ALL = new SearchConstraints();
-		ALL.setMaxResults(new Long(-1));
+		ALL.setMaxResults(Long.valueOf(-1));
 
 		try {
 			DFAgentDescription[] result = DFService.search(agent, dfd, ALL);
