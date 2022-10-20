@@ -1,30 +1,18 @@
 package smartrobots.agents;
 
-import java.io.IOException;
-
 import org.pmw.tinylog.Logger;
 
-import smartrobots.behaviours.robot.CalculatePathBehaviour;
-import smartrobots.behaviours.robot.FindBlockProviderBehaviour;
-import smartrobots.behaviours.robot.MoverBehaviour;
 import smartrobots.behaviours.station.DoWorkBehaviour;
 import smartrobots.behaviours.station.FindWorkerBehaviour;
 import smartrobots.behaviours.station.RequestBlockBehaviour;
 import smartrobots.behaviours.station.RequestBlockPickUp;
-import smartrobots.model.actors.Robot;
-import smartrobots.model.entities.Block;
 import smartrobots.model.entities.Station;
-import smartrobots.model.grid.Position;
 import smartrobots.ontology.BlockProcessingOntology;
 import jade.content.lang.Codec;
 import jade.content.lang.sl.SLCodec;
 import jade.content.onto.Ontology;
 import jade.core.AID;
 import jade.core.Agent;
-import jade.core.behaviours.CyclicBehaviour;
-import jade.core.behaviours.SequentialBehaviour;
-import jade.lang.acl.ACLMessage;
-import jade.lang.acl.UnreadableException;
 
 public class StationAgent extends Agent {
 

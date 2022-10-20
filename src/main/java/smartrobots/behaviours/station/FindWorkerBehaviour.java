@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.pmw.tinylog.Logger;
 
 import jade.core.AID;
-import jade.core.Agent;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;

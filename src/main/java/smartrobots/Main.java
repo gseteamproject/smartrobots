@@ -18,10 +18,8 @@ import smartrobots.model.grid.Grid;
 import smartrobots.util.SampleGrid;
 import smartrobots.resources.GridResource;
 import smartrobots.resources.RobotResource;
-import smartrobots.resources.PalletResource;
 import smartrobots.resources.StationResource;
 import smartrobots.services.GridService;
-import smartrobots.services.PalletService;
 import smartrobots.services.RobotService;
 import smartrobots.services.StationService;
 
